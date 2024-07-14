@@ -1,0 +1,15 @@
+
+def removeDuplicates(self, nums):
+    if not nums:
+        return 0
+    k = 0
+    for i in range(1,len(nums)):
+        if nums[i] != nums[k]:
+            k += 1
+            nums[k] = nums[i]
+    for i in range(k+1,len(nums)):
+        nums[i] = '_'
+    return k+1
+        
+            
+        
